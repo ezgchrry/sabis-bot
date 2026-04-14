@@ -11,15 +11,15 @@ jobs:
 
     steps:
     - name: Depoyu Klonla
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Python Kurulumu
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
     - name: Hafizayi Yukle
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: sabis_hafiza.txt
         key: sabis-memory-${{ github.run_id }}
@@ -41,7 +41,7 @@ jobs:
 
     - name: Hafizayi Kaydet
       if: always()
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: sabis_hafiza.txt
         key: sabis-memory-${{ github.run_id }}
